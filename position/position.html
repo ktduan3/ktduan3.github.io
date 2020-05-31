@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 800px;
+            height: 600px;
+            border: solid;
+            position: relative;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+        }
+
+        .item1 {
+            border: solid blue;
+            /*            relative: non-static*/
+            /*            relative to its original position*/
+            /*            won;t free space*/
+            position: relative;
+            right: 100px;
+            top: 100px;
+        }
+
+        .item2 {
+            border: solid yellow;
+            /*            absolute element looks for its container with non-static postion*/
+            position: absolute;
+            /*            relative to its container*/
+            /*            the space is freed, since its like float*/
+            right: 100px;
+
+        }
+
+        .item3 {
+            border: solid red;
+            position: fixed;
+            bottom:10px;
+            right:10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--   
+    relative:  - elative to its original position
+    
+    
+   absolute:   - relative to its container which must have                 a non-static postiion
+               - it frees its original space
+               
+               
+   fixed:     - always relative to viewport
+   -->
+    <div id="container">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+
+</body></html>

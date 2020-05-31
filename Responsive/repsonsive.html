@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /*            border inculdes padding and border*/
+            box-sizing: border-box;
+        }
+
+        /*        <576px*/
+
+        div {
+            height: 200px;
+            border: solid;
+            background-color: tomato;
+        }
+        body:before{
+            content:'small phone';
+        }
+        /*        >=576px*/
+        @media all and (min-width: 576px) {
+            div {
+                background-color: antiquewhite;
+            }
+        }
+
+        @media print and (min-width: 576px) {
+            div {
+                background-color: aliceblue;
+            }
+        }
+
+
+
+        /*        >=768px*/
+        @media all and (min-width: 768px) {
+            div {
+                display: inline-block;
+                width: 49%;
+            }
+        }
+
+        /*        >=992px*/
+        @media screen and (min-width: 992px) {
+        div {
+            background-color:lightblue;
+            width: 33%;
+        }
+        }
+
+        /*>=1200*/
+                @media screen and (min-width: 1200px) {
+        div {
+            border-radius: 33%;
+            width: 24%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            responsive design lets our designs fit into different sizes of screens
+        </li>
+        <li>1.Mobile Interface</li>
+    </ul>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body></html>

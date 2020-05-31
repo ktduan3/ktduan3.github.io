@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            border: solid;
+/*            relative to its parent tag*/
+/*
+            
+            width: 100%;
+*/
+/*            let computer decide = default value, same thing with height*/
+            
+            width: auto;
+            width: 0;
+        }
+
+        #inline-block {
+            display: inline-block;
+            border: solid;
+            
+/*            relative to parent tag*/
+            width: 100%;
+            
+/*            defualt value*/
+/*            width: auto;*/
+        }
+        #inline{
+            display:inline;
+            border:solid;
+/*            no effetcs*/
+            width: 100%;
+            width: auto;
+            width: 0;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!--   block:wdefault, h0, in-line-block, inline-->
+<!--    apply width "auto vs 100% vs 0' to block, inline-block, and inline elements-->
+<!--    width behavior based on element type-->
+<!--   check 3 values for width for 3 element types-->
+    <div></div>
+    <p id="inline-block"></p>
+    <br>
+    <p id="inline">hi</p>
+</body></html>
