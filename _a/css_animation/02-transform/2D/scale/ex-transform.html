@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+            
+/*            centers vertically*/
+            display: flex;
+            height: 100vh;
+        }
+        div{
+            background: skyblue;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: auto;
+            
+            
+            transition: 0.5s;
+        }
+        
+/*        pseudo selector: hover (sets state)*/
+        div:hover{
+            transform: scale(50);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+   <div></div>
+    
+</body>
+</html>

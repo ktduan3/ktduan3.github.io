@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Battery</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: black;
+        }
+
+        #battery {
+            padding-top: 65px;
+            position: relative;
+        }
+
+        #terminal {
+            /*            border: solid #ba5757;*/
+            background-color: #ba5757;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            height: 5px;
+            width: 25px;
+            margin: 0 auto;
+            animation: tipchange 7s alternate infinite;
+        }
+
+        #container {
+            height: 200px;
+            width: 100px;
+            box-shadow: 0px 0px 20px red inset;
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 200px;
+            margin: 0 auto;
+                        animation: batterychange 7s alternate infinite;
+        }
+
+        #value {
+            height: 10px;
+            width: 100%;
+            background-color: #c4ff50;
+                        animation: valuechange 7s linear alternate infinite;
+            box-shadow: 0px 0px 5px #222 inset;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        #battery:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes valuechange {
+            100% {
+                height: 100%;
+            }
+        }
+
+        @keyframes tipchange {
+            100% {
+                background-color: silver;
+            }
+        }
+
+        @keyframes batterychange {
+            100% {
+                box-shadow: 0px 0px 10px lime inset;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="battery">
+        <div id="terminal"></div>
+        <div id="container">
+            <div id="value"></div>
+        </div>
+    </div>
+</body></html>
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+/*            border: solid;*/
+            display: flex;
+             perspective: 1000px;
+           
+        }
+        .surface{
+            transition: 5s;
+            transform-style: preserve-3d;
+            margin: auto;
+/*            default value: none*/
+/*            negative values are invalid*/
+            
+/*            1: create 3D space
+              2: set distance between eyes and z-plane*/
+            perspective: 1000px;
+            width: 400px;
+            height: 400px;
+/*            background-color: rgba(0,0,0,0.5);*/
+        }
+        .surface:hover{
+            transform: rotateY(1turn);
+        }
+        .face {
+            width: 200px;
+            height: 200px;
+            font-size: 6rem;
+            text-align: center;
+            opacity: 90%;
+            margin: auto;
+            
+/*       center     */
+/*       absolute elements looks for its container which has non-static position*/
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+        }
+
+        .front {
+            background-color: lavender;
+            transform: translateZ(200px);
+            
+
+        }
+
+        .back {
+            background-color: lightgoldenrodyellow;
+        }
+
+        .left {
+            background-color: aliceblue;
+            transform: rotateY(-90deg);
+            transform-origin: left;
+        }
+
+        .right {
+            background-color: lightgray;
+        transform: rotateY(90deg);
+            transform-origin: right;
+        }
+
+        .top {
+            background-color: blanchedalmond;
+            transform: rotateX(-90deg);
+        }
+
+        .bot {
+            background-color: lightpink;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="surface">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face left">3</div>
+        <div class="face right">4</div>
+        <div class="face top">5</div>
+        <div class="face bot">6</div>
+    </div>
+
+</body></html>

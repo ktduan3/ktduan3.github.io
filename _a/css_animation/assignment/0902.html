@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            /*                        border: solid;*/
+            transform: rotateZ(180deg);
+            width: 2rem;
+            height: 100vh;
+
+            margin: auto;
+            margin-top: 4rem;
+        }
+
+        .top {
+            position: absolute;
+            margin-top: 3.05rem;
+            margin-left: 0.62rem;
+            background-color: lightgray;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            width: 0.5rem;
+            height: 0.1rem;
+            border: solid gray;
+            animation: tipColor 5s infinite;
+        }
+
+
+        .charge {
+            margin-top: 3rem;
+
+            width: 2rem;
+            height: 2rem;
+            background-color: lawngreen;
+            border-radius: 5%;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: absolute;
+
+
+        }
+
+        .border {
+            border: solid 0.9px black;
+            border-radius: 3%;
+            margin-top: 3rem;
+            width: 1.9rem;
+            height: 3rem;
+            position: absolute;
+
+            animation: borderColor 5s infinite;
+        }
+
+        @keyframes borderColor {
+            0% {
+                border-color: red;
+                box-shadow: 0 0 2px 0.5px indianred inset;
+            }
+
+            50% {
+                border-color: forestgreen;
+                box-shadow: 0 0 2px 0.5px lime inset;
+            }
+
+            100% {
+                border-color: red;
+                box-shadow: 0 0 2px 0.5px indianred inset;
+
+            }
+        }
+
+        @keyframes move {
+
+            from {
+                border-radius: 5%;
+                width: 2rem;
+                height: 0;
+                background-color: indianred;
+                /*                border:red;*/
+
+            }
+
+            50% {
+                background-color: lime;
+                border-radius: 0%;
+                width: 2rem;
+                height: 3.1rem;
+
+            }
+
+            to {
+                border-radius: 5%;
+                width: 2rem;
+                height: 1px;
+                background-color: indianred;
+                /*                border: solid 1px red;*/
+            }
+        }
+
+        @keyframes tipColor {
+            from {
+               border: solid 1px indianred;
+            }
+
+            50% {
+
+                
+                border: solid 1px forestgreen;
+
+            }
+
+            to {
+                border: solid 1px indianred;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="charge"></div>
+    <div class="border">
+        <div class="top"></div>
+    </div>
+
+</body></html>

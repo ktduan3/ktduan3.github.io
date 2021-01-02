@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            border-radius: 50%;
+/*            one state(only works for 1 time) limit*/
+/*            transition: 1s;*/
+/*            transform: rotate(90deg) translateY(500px);*/
+            
+/*        animation*/
+/*            advantage: many states, many times, no trigger needed (ie. hover)*/
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        
+        
+        @keyframes move{
+            from{
+                transform:translateX(0px);
+            }
+            25%{
+                transform: translateX(200px) rotate(90deg);
+            }
+             50%{
+                transform: translate(200px, 200px) rotate(180deg);
+            }
+/*            100% */
+             to{
+                transform: translate(0,200px) rotate(270deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/photo/2015/12/03/03/04/scottish-fold-cats-1073667_960_720.jpg" alt="">
+</body>
+</html>

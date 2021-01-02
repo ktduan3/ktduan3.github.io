@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 200px;
+            border: solid;
+            margin-bottom: 100px;
+        }
+        
+        .item1, .item2, .item3, .item4{
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to right, skyblue,white);
+            display: inline-block;
+            
+        }
+        .container:first-child{
+/*            perspective property: set perspective for container, meaning the items share the 3D space, thus have the same vanishing point*/
+            perspective: 1000px;
+        }
+        
+        
+/*        everything within container*/
+        .container:first-child * { 
+            transform: rotateY(80deg);
+        }
+        .container:first-child(2) * { 
+/*            perspective function: set perspectieve to EACH item*/
+            transform: perspective(1000px) rotateY(60deg);
+        }
+    </style>
+</head>
+<body>
+<!--$: continuous number series-->
+<!--   .container>.item$*4-->
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+    </div>
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+    </div>
+</body>
+</html>

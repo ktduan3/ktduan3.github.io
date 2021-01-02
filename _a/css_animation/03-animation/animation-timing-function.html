@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            background-color: lavender;
+            border-radius: 50%;
+
+        }
+        .dot{
+            display: inline-block;
+            margin-right: 73px;
+            color:aliceblue; 
+        }
+        #bar{
+            width: 20px;
+            height: 300px;
+            background-color: lavender;
+            animation: move 5s;
+            
+/*            steps() divides each frame evenly */
+            
+            /*            every frame takes 5 steps */
+
+            /*			 it takes two parameters:
+			1, specifies the positive number of steps we want our animation to take.
+			2, specifies the point at which the action declared in our @keyframes will occur, default is 'end'*/
+
+
+
+            animation-timing-function: steps(1);
+/*            steps to the next frame on the end of the time interval*/
+        animation-timing-function: step-end;
+            
+/*steps to the next frame on the start of the time interval*/
+        animation-timing-function: step-start;
+            
+/*            step 2 + step-end*/
+            animation-timing-function: steps(2,end);
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+
+               @keyframes move {
+            0% {
+                transform: translateX(0px);
+            }
+
+            20% {
+                transform: translateX(100px);
+            }
+
+            40% {
+                transform: translateX(200px);
+            }
+
+            60% {
+                transform: translateX(300px);
+            }
+
+            80% {
+                transform: translateX(400px);
+            }
+
+            100% {
+                transform: translateX(500px);
+            }
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="dot">
+        <div class="circle"></div>
+        <div class="text">0</div>
+    </div>
+    <div class="dot">
+        <div class="circle"></div>
+        <div class="text">100</div>
+    </div>
+    <div class="dot">
+        <div class="circle"></div>
+        <div class="text">200</div>
+    </div>
+    <div class="dot">
+        <div class="circle"></div>
+        <div class="text">300</div>
+    </div>
+    <div class="dot">
+        <div class="circle"></div>
+        <div class="text">400</div>
+    </div>
+        <div class="dot">
+        <div class="circle"></div>
+        <div class="text">500</div>
+    </div>
+    <div id="bar"></div>
+</body></html>

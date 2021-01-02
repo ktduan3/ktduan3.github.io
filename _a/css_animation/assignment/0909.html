@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .line {
+            z-index: 99;
+            width: 1px;
+            height: 200px;
+            position: absolute;
+            background-color: darkgray;
+            left: 15rem;
+            top: 4rem;
+
+        }
+
+        #line1 {
+            width: 3px;
+        }
+
+        #line2 {
+            transform: rotateZ(30deg);
+        }
+
+        #line3 {
+            transform: rotateZ(60deg);
+        }
+
+        #line4 {
+            width: 3px;
+            transform: rotateZ(90deg);
+        }
+
+        #line5 {
+            transform: rotateZ(120deg);
+        }
+
+        #line6 {
+            transform: rotateZ(150deg);
+        }
+
+        .circle {
+            z-index: 100;
+            position: absolute;
+            border-radius: 50%;
+            /*            border: solid;*/
+            width: 180px;
+            height: 180px;
+            background-color: white;
+            left: 9.5rem;
+            top: 4.6rem;
+        }
+
+        .circle2 {
+            z-index: 98;
+            position: absolute;
+            border-radius: 50%;
+            border: solid lavender;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            left: 8.73rem;
+            top: 3.9rem;
+        }
+
+        .sec {
+            z-index: 101;
+            width: 1px;
+            height: 90px;
+            background-color: black;
+            position: absolute;
+            left: 15rem;
+            top: 4.5rem;
+            animation: sec 86400s steps(86400);
+            transform-origin: bottom;
+
+        }
+
+        @keyframes sec {
+            to {
+                transform: rotateZ(518400deg);
+            }
+        }
+
+        .min {
+            z-index: 101;
+            width: 4px;
+            height: 80px;
+            background-color: palegreen;
+            position: absolute;
+            left: 14.8rem;
+            top: 5.3rem;
+            animation: min 86400s steps(1440);
+            transform-origin: bottom;
+            transform: rotateZ(-5deg);
+
+        }
+
+        @keyframes min {
+
+            to {
+                transform: rotateZ(3640deg);
+            }
+        }
+
+        .hour {
+            z-index: 101;
+            width: 4px;
+            height: 50px;
+            background-color: lightblue;
+            position: absolute;
+            left: 14.8rem;
+            top: 7rem;
+            animation: hour 21600s steps(60);
+            transform-origin: bottom;
+            transform: rotateZ(100deg);
+
+        }
+
+        @keyframes hour {
+            to {
+                transform: rotateZ(8640deg);
+            }
+        }
+
+        .middle {
+            z-index: 102;
+            position: absolute;
+            border-radius: 50%;
+            /*            border: solid ;*/
+            width: 10px;
+            height: 10px;
+            background-color: lavender;
+            left: 14.6rem;
+            top: 9.8rem;
+        }
+
+        .cover {
+            z-index: 0;
+            border-radius: 15%;
+            width: 300px;
+            height: 300px;
+            border: solid 10px lightgrey;
+            background-color: lavenderblush;
+            position: absolute;
+            left: 5rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="line" id="line1"></div>
+    <div class="line" id="line2"></div>
+    <div class="line" id="line3"></div>
+    <div class="line" id="line4"></div>
+    <div class="line" id="line5"></div>
+    <div class="line" id="line6"></div>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <div class="sec"></div>
+    <div class="min"></div>
+    <div class="hour"></div>
+    <div class="middle"></div>
+    <div class="cover"></div>
+</body></html>

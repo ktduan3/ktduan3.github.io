@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 400px;
+            border: solid;
+
+/*            perspective: how close eyes are to Z-plane*/
+            
+            /*       more perspective, less effects*/
+            /*       less perspective, more effective*/
+            perspective: 1px;
+            
+/*            perspective origin is the direction user eyes look at*/
+/*            or it is vanishing point position*/
+            perspective-origin: center;
+            perspective-origin: left top;
+            perspective-origin: left top;
+        }
+
+        .item {
+            width: 600px;
+            height: 400px;
+            background-color: lavender;
+            transform: rotateX(45deg);
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+
+</body></html>

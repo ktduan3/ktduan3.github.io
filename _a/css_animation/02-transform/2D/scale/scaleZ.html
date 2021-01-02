@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #surface {
+            border: solid;
+            height: 100vh;
+            /*            root(html) em*/
+            /*            em:  times bigger of the font size in the parent element*/
+            /*            rem: relative to root(html) size*/
+            font-size: 2rem;
+            perspective: 1000px;
+            display: flex;
+        }
+
+        #container {
+            background-color: antiquewhite;
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            
+/*            preserve 3d space for its children*/
+            
+/*
+ 
+   preserve-3d:  
+            
+            Indicates that the children of the element should be positioned in the 3D-space.
+
+    flat:  
+            
+            Indicates that the children of the element are lying in the plane of the element itself.
+            
+*/
+
+
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transform: rotateY(48deg);
+            display: flex;
+
+        }
+
+        #item {
+            width: 300px;
+            height: 200px;
+
+            margin: auto;
+            background-color: lavender;
+
+            /*scaleZ: scales Z axis, if original 100px, the 100px gets longer*/
+            transform: translateZ(300px) scaleZ(2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="surface">surface
+        <div id="container">
+            <div id="item"></div>
+        </div>
+    </div>
+
+</body></html>

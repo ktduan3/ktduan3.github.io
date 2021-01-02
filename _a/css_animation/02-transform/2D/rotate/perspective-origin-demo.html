@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            border: solid blue;
+            perspective: 1px;
+/*            perspective-origin: 0 0;*/
+/*            perspective-origin: 50% 0;*/
+/*            perspective-origin: 100% 0;*/
+/*            perspective-origin: 0% 50%;*/
+/*            perspective-origin: 50% 50%;*/
+/*            perspective-origin: 100% 50%;*/
+/*            perspective-origin: 0% 100%;*/
+/*            perspective-origin: 50% 100%;*/
+/*            perspective-origin: 100% 100%;*/
+            
+/*            perspective-origin: top left;*/
+/*            perspective-origin: top;*/
+/*            perspective-origin: top right;*/
+/*            perspective-origin: left;*/
+/*            perspective-origin: center;*/
+/*            perspective-origin: right;*/
+/*            perspective-origin: bottom left;*/
+/*            perspective-origin: bottom;*/
+/*            perspective-origin: bottom right;*/
+            
+            animation: pointing 18s infinite;
+        }
+        
+        .surface {
+            width: 300px;
+            height: 300px;
+/*            move perspective to body */
+/*            perspective: 2px;*/
+            transform-style: preserve-3d;
+            margin: auto;
+            margin-top: 200px;
+            transition: 1s;
+            animation: pointing 18s infinite;
+        }
+        
+        .side {
+            width: 300px;
+            height: 300px;
+            font-size: 150px;
+            line-height: 300px;
+            color: white;
+            text-align: center;
+            position: absolute;
+            border: solid black;
+            opacity: 0.7;
+        }
+        
+        .front {
+            background: tomato;
+        }
+        
+        .right {
+            background: blue;
+            transform: rotateY(-90deg);
+            transform-origin: right;
+        }
+        
+        .back {
+            background: green;
+            transform: translateZ(-300px);
+        }
+        
+        .left {
+            background: yellow;
+            transform: rotateY(90deg);
+            transform-origin: left;
+        }
+        
+        .top {
+            background: lime;
+            transform: rotateX(-90deg);
+            transform-origin: top;
+        }
+        
+        .down {
+            background: #09437e;
+            transform: rotateX(90deg);
+            transform-origin: bottom;
+        }
+        
+        @keyframes pointing {
+            0% {
+                perspective-origin: top left;
+            }
+            12.5% {
+                perspective-origin: top center;
+            }
+            25% {
+                perspective-origin: top right;
+            }
+            37.5% {
+                perspective-origin: center left;
+            }
+            50% {
+                perspective-origin: center;
+            }
+            62.5% {
+                perspective-origin: center right;
+            }
+            75% {
+                perspective-origin: bottom left;
+            }
+            87.5% {
+                perspective-origin: bottom center;
+            }
+            100% {
+                perspective-origin: bottom right;
+            }
+                
+        }
+    </style>
+</head>
+
+<body>
+<!--    https://tympanus.net/codrops/css_reference/perspective-origin/ -->
+<!--    Perspective origin defines the middle vanishing point in horizontal line or vertical line.-->
+    <div class="surface">
+        <div class="side front">1</div>
+        <div class="side right">2</div>
+        <div class="side back">3</div>
+        <div class="side left">4</div>
+        <div class="side top">5</div>
+        <div class="side down">6</div>
+    </div>
+</body>
+
+</html>
+
+

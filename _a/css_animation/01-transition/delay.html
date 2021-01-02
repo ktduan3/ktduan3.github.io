@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100px;
+
+        }
+
+        ul {
+            font-size: 4rem;
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            left: -163px;
+            transition: 1s;
+            
+        }
+        li:nth-child(2){
+            transition-delay: 1s;
+        }
+        li:nth-child(3){
+            transition-delay: 2s;
+        }
+
+        body:hover li:first-child {
+            left: 100px;
+        }
+
+        body:hover li:nth-child(2) {
+            left: 100px;
+
+        }
+
+        body:hover li:last-child {
+            left: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+</body>
+
+</html>

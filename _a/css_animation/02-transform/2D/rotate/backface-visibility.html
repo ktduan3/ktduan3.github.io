@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 1000px;
+        }
+        img {
+            width: 100%;
+            transition: 4s;
+            
+/*            transform: rotateY(180deg);*/
+/*            backface-visibility: hidden;*/
+        }
+        
+        img:hover{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!--    alt is for people who cannot see the screen, but can use screenreader to read page-->
+    <img src="https://www.oneequalworld.com/wp-content/uploads/2017/02/shutterstock_201120113.jpg" alt="postcard" id="postcard">
+</body></html>

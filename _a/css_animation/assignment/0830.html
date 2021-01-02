@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            * {
+                transition: 15000s;
+
+                transition-timing-function: linear;
+            }
+
+            body {
+
+                position: relative;
+                /*            overflow: hidden;*/
+                padding-top: 10rem;
+                padding-left: 4rem;
+                margin: auto;
+                height: 100vh;
+                perspective: 1000px;
+                transform-style: preserve-3d;
+            }
+
+            img {
+                border: solid 0.1rem lightgrey;
+
+                /*
+                    margin:0;
+                    padding: 0;
+                */
+                width: 5rem;
+                display: inline-block;
+                height: 3rem;
+            }
+
+            .block {
+                opacity: 90%;
+                border: solid 0.1rem lightgrey;
+                display: inline-block;
+                margin: 0;
+                margin-left: -4px;
+                height: 3rem;
+                width: 3rem;
+                background: linear-gradient(0.25turn, lightgray, 5%, white);
+
+
+
+            }
+
+            body:hover .cat {
+                transform-origin: right;
+                transform: rotate3d(0, 1, 0, 5000turn);
+            }
+
+            .cat {
+
+                display: inline-block;
+                position: absolute;
+                transform-origin: right;
+
+
+            }
+
+
+            body:hover .sunset {
+
+                transform-origin: right;
+                transform: rotate3d(0, 1, 0, 5000turn);
+            }
+
+            .sunset {
+
+                display: inline-block;
+                position: absolute;
+                transform-origin: right;
+                transform: rotateY(80deg);
+
+            }
+
+            .lin {
+                display: inline-block;
+                position: absolute;
+                transform-origin: right;
+                transform: rotateY(160deg);
+            }
+
+            body:hover .lin {
+
+                transform-origin: right;
+                transform: rotate3d(0, 1, 0, 5000turn);
+            }
+
+            .g {
+                display: inline-block;
+                position: absolute;
+                transform-origin: right;
+                transform: rotateY(240deg);
+            }
+
+            body:hover .g {
+
+                transform-origin: right;
+                transform: rotate3d(0, 1, 0, 5000turn);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="cat">
+
+            <img class="pic1" src="https://cdn.shopify.com/s/files/1/0023/1591/1268/files/sottish_fold2_6fe04e0c-558e-4698-a641-1a48e0a0408a_large.jpg?v=1552322604" alt="">
+            <div class="block"></div>
+
+        </div>
+        <div class="sunset">
+            <img class="pic2" src="https://images.unsplash.com/photo-1568050878867-e1755e3c15ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="">
+            <div class="block"></div>
+
+        </div>
+
+        <div class="lin">
+            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/fbe0e896687657.Y3JvcCwxMDA3LDc4OCwyMDEsMA.png" alt="" class="pic3">
+            <div class="block"></div>
+        </div>
+        <div class="g">
+            <img src="https://image.freepik.com/free-photo/happy-teenage-girl-playing-guitar-outdoors_23-2147879707.jpg" alt="" class="pic4">
+            <div class="block"></div>
+        </div>
+    </body>
+
+    </html>
+
+
+
+
+</body></html>
+
+

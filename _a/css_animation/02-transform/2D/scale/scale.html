@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            transition: 1s;
+        }
+
+        img {
+/*            double*/
+            transform: scaleX(2) scaleY(2);
+            
+/*            flip*/
+            transform: scaleX(-1)
+            scaleY(-1);
+            
+/*            scale both XY by 3*/
+            transform: scale(3);
+            
+            
+            /*transform has order*/
+            transform: translate(200px,200px) scale(2) ;
+            transform: scale(2) translate(200px,200px) ;
+}
+    </style>
+</head>
+
+<body>
+    <img src="/_a/me.jpg" alt="">
+</body></html>

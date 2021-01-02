@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #surface {
+            perspective: 2000px;
+            text-align: center;
+                        margin-left: 40rem;
+            margin-top: 10rem;
+            /*            transform: translateX(600px);*/
+        }
+
+        #spinner {
+            /*            border: solid red;*/
+            transform: translateX(400px);
+            transform-style: preserve-3d;
+            transform-origin: left;
+            animation: rotate 8s infinite linear;
+
+        }
+
+        img {
+            width: 280px;
+            height: 150px;
+            border: solid lightgray;
+            padding-left: 150px;
+            box-shadow: 0px 0px 20px 5px lightgray inset;
+            transform-origin: left;
+            display: block;
+            position: absolute;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translateX(400px) rotateY(0);
+            }
+
+            100% {
+                transform: translateX(400px) rotateY(360deg);
+            }
+        }
+
+        #one {
+            transform: rotateY(0);
+        }
+
+        #two {
+            transform: rotateY(72deg);
+        }
+
+        #three {
+            transform: rotateY(144deg);
+        }
+
+        #four {
+            transform: rotateY(216deg);
+        }
+
+        #five {
+            transform: rotateY(288deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="surface">
+        <div id="spinner">
+            <img id="one" src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg?w=1155&h=1541" width="200" height="160" alt="">
+
+            <img id="two" src="https://specials-images.forbesimg.com/imageserve/5db4c7b464b49a0007e9dfac/960x0.jpg?fit=scale" width="213" height="160" alt="">
+
+            <img id="three" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx4CppJQ3hphvHpv92Y1LoavpTozWJ31FFQw&usqp=CAU" width="240" height="160" alt="">
+
+            <img id="four" src="https://a0.cdn.japantravel.com/photo/61506-210951/320x240!/akita-akita-dog-visitor-center-210951.jpg" width="213" height="160" alt="">
+
+            <img id="five" src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/dog-grass-441879.jpg?h=a77125df&itok=oA8hUTqS" width="238" height="160" alt="">
+        </div>
+    </div>
+</body></html>
+

@@ -18,9 +18,43 @@
             border: solid;
             background-color: tomato;
         }
-        body:before{
-            content:'small phone';
+
+        body:before {
+            content: 'small phone';
         }
+
+
+
+
+
+
+
+
+        /*
+        @media print and (min-width: 576px) {
+            div {
+                background-color: aliceblue;
+            }
+        }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /*        >=576px*/
         @media all and (min-width: 576px) {
             div {
@@ -28,36 +62,30 @@
             }
         }
 
-        @media print and (min-width: 576px) {
-            div {
-                background-color: aliceblue;
-            }
-        }
-
-
 
         /*        >=768px*/
         @media all and (min-width: 768px) {
             div {
                 display: inline-block;
                 width: 49%;
+                background-color: aquamarine;
             }
         }
 
         /*        >=992px*/
         @media screen and (min-width: 992px) {
-        div {
-            background-color:lightblue;
-            width: 33%;
-        }
+            div {
+                background-color: lightblue;
+                width: 33%;
+            }
         }
 
         /*>=1200*/
-                @media screen and (min-width: 1200px) {
-        div {
-            border-radius: 33%;
-            width: 24%;
-        }
+        @media screen and (min-width: 1200px) {
+            div {
+                border-radius: 33%;
+                width: 24%;
+            }
         }
     </style>
 </head>

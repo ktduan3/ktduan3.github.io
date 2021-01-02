@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            border-radius: 50%;
+            animation: move 3s linear;
+            animation-delay: 1s;
+        }
+
+                    /*-
+        
+        fill-mode defines what state before animation and after animation 
+        
+        */
+        img#one {
+            /* before animation what the element looks like */
+            /* use the first frame before animation */
+            animation-fill-mode: backwards;
+            
+/*            animation direction: reverse frames:
+            always goes from frist frame to last frame
+            but 100% is now the first frame*/
+            
+/*            first/last frame depends on 'animation-direction'*/
+/*            last frame depends on 'animation-iteration-count'*/
+            animation-direction: reverse;
+
+            /*            */
+        }
+
+        img#two {
+            /* after animation what the element looks like */
+            animation-fill-mode: forwards;
+            /* use the last frame after animation */
+        }
+
+        #three {
+
+            animation-fill-mode: both;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(100px);
+            }
+
+            100% {
+                transform: translateX(300px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Backwards</h1>
+    <img id='one' src="https://i.guim.co.uk/img/media/86c3481516dce247943ac2978b4f48d16a3ac265/0_170_5120_3074/master/5120.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=637dc5731d52754675ef36344a6af3c8" alt="">
+
+    <h1>Forward</h1>
+    <img id='two' src="https://i.guim.co.uk/img/media/86c3481516dce247943ac2978b4f48d16a3ac265/0_170_5120_3074/master/5120.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=637dc5731d52754675ef36344a6af3c8" alt="">
+
+    <h1>both</h1>
+    <img id='three' src="https://i.guim.co.uk/img/media/86c3481516dce247943ac2978b4f48d16a3ac265/0_170_5120_3074/master/5120.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=637dc5731d52754675ef36344a6af3c8" alt="">
+</body></html>
+
+
