@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            padding: 200px 0;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 6.5rem;
+            line-height: 6.5rem;
+            letter-spacing: 0.8rem;
+            font-weight: 800;
+            text-align: center;
+            font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            color: white;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.1;
+            display: block;
+            margin: 8px 132.522px;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        nav {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+            position: relative;
+            z-index: 2;
+        }
+
+        header ul {
+            list-style: none;
+        }
+
+
+
+        header li {
+            display: inline-block;
+            transition: none;
+            border-color: transparent;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 32px 24px;
+        }
+
+        a {
+            margin-top: 50px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+            border-radius: 6%;
+        }
+
+        header {
+            background-image: url(https://blackrockdigital.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg);
+
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+
+            position: relative;
+
+        }
+
+        .gs {
+            box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+            padding: 1.25rem 2rem;
+            font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 80%;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border: 0;
+            color: #fff;
+            background-color: #64a19d;
+            display: inline-block;
+            font-weight: 400;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        #overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        main {
+            position: relative;
+            z-index: 999;
+        }
+
+        section {
+            background-color: black;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1.2;
+            box-sizing: border-box;
+            margin-top: 0;
+            display: block;
+            text-align: center;
+            letter-spacing: 0.0625em;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        #p2 {
+            background-color: black;
+            margin-bottom: 5rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0;
+            box-sizing: border-box;
+            display: block;
+            text-align: center;
+            letter-spacing: 0.0625em;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            width: 70%;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-top: 0;
+            display: block;
+            box-sizing: border-box;
+            text-align: center;
+            letter-spacing: 0.0625em;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+        }
+
+        #p1 {
+
+            font-size: 16px;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            margin-bottom: 5rem;
+
+            margin-top: 0;
+            box-sizing: border-box;
+            display: block;
+            text-align: center;
+            letter-spacing: 0.0625em;
+            font-weight: 400;
+            line-height: 1.5;
+            width: 90%;
+            margin: auto;
+        }
+
+        #first {
+            margin-top: 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100px;
+            background-size: contain;
+            width: 90%;
+
+        }
+
+        #second {
+            vertical-align: middle;
+            border-style: none;
+            margin-bottom: 1rem;
+            max-width: 70%;
+            height: auto;
+            box-sizing: border-box;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        #div1 {
+            color: black;
+        }
+
+        #third {
+            vertical-align: middle;
+            border-style: none;
+            margin-bottom: 1rem;
+            max-width: 70%;
+            height: auto;
+            box-sizing: border-box;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        h3 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1.2;
+            box-sizing: border-box;
+            margin-top: 0;
+            display: block;
+            text-align: center;
+            letter-spacing: 0.0625em;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: black;
+        }
+
+        #p3 {
+            background-color: black;
+            margin-bottom: 5rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0;
+            box-sizing: border-box;
+            display: block;
+            text-align: center;
+            letter-spacing: 0.0625em;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+
+
+        }
+
+        #last1 {
+            background-image: url(https://blackrockdigital.github.io/startbootstrap-grayscale/assets/img/bg-signup.jpg);
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment: scroll;
+            background-position: center;
+            position: relative;
+            paddding: 100px 0 200px 0;
+            
+        }
+
+        input {
+            
+            display: inline-block;
+            box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+            padding: 1.25rem 2rem;
+            height: auto;
+            font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 80%;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border: 0;
+font-size: 0.7rem;
+
+        }
+
+        h4 {
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            letter-spacing: 0.0625em;
+            text-align: center;
+            box-sizing: border-box;
+            font-weight: 500;
+            line-height: 1.2;
+            font-size: 2rem;
+            margin-bottom: 3rem !important;
+            color: #fff;
+        }
+
+        button {
+            box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+            padding: 1.25rem 2rem;
+            font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 80%;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            border: 0;
+            color: #fff;
+            background-color: #64a19d;
+            margin-left: 15.3rem;
+            margin-bottom: 10rem;
+
+
+        }
+
+        adress,email,phone {
+
+            background-color: #fff;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 80%;
+            font-weight: 400;
+            display: block;
+            letter-spacing: 0.0625em;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.5);
+            padding: 1.25rem;
+            margin-left: 13rem;
+            margin-right: 13rem;
+            border-radius: 0.25rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            padding: 1.5rem;
+            height: 100%;
+            border: 0;
+            border-bottom: 0.25rem solid #64a19d;
+            margin-bottom: 2rem;
+            z-index: 999;
+        }
+        #black{
+            background-color: black;
+        }
+        #email{
+            margin-top: auto;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        h5,h6,h7 {
+            font-size: 0.8rem;
+            font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            letter-spacing: 0.15rem;
+            text-transform: uppercase;
+            margin: 0;
+                font-weight: 500;
+    line-height: 1.2;
+        
+        }
+        footer{
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>Start Bootstrap
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="overlay"></div>
+        <main>
+            <h1>GRAYSCALE</h1>
+            <Span>A free, responsive, one page Bootstrap theme created by Start Bootstrap.</Span>
+            <a class="gs" href="">Get Started</a>
+        </main>
+    </header>
+    <section>
+        <h1>Built with Bootstrap 4</h1>
+        <p id="p2"> Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on the preview page. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+        <img id="first" src="https://blackrockdigital.github.io/startbootstrap-grayscale/assets/img/ipad.png" alt="">
+    </section>
+    <div>
+        <img id="second" src="https://blackrockdigital.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg" alt="">
+        <h2>Shoreline</h2>
+        <p id="p1">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+
+    </div>
+    <div id="div1">
+        <img id="third" src="https://blackrockdigital.github.io/startbootstrap-grayscale/assets/img/demo-image-01.jpg" alt="">
+        <h3>Misty</h3>
+        <p id="p3">An example of where you can put an image of a project, or anything else, along with a description.</p>
+
+    </div>
+
+
+    <div id="last1">
+<i class="far fa-paper-plane"></i>
+        <h4>Subscribe to receive updates</h4>
+        <input type="text" placeholder="ENTER EMAIL ADRESS..." name='Email'>
+        <button>Subscribe</button>
+
+    </div>
+    <div id="black">        <adress>
+            <h5>adress</h5>
+            4923 Market Street, Ontario FL
+        </adress>
+        <email><h6>email</h6><a id="email" href="mailto:ktduan3@gmail.com">ktduan3@gmail.com</a></email>
+        <phone><h7>phone</h7>+1(234)567-8900</phone></div>
+<footer>copyright &copy; 2020</footer><hr>
+</body></html>

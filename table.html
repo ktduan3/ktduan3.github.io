@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        tr:first-child{
+            background-color: lightsteelblue;
+            text-align: center;
+        }
+        tr:nth-child(even),tr:nth-child(3){
+            background-color: pink;
+            
+        }
+        td {
+            width: 200px;
+        }
+
+        td:first-child {
+            width: 75px;
+        }
+        tr:last-child{
+            width: 200px;
+        }
+        captions{
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <table border>
+       <caption>hahahaha</caption>
+        <!--       table row-->
+        <tr>
+            <!--            table data-->
+            <td>Name</td>
+            <td>Phone</td>
+            <td>Stuff</td>
+        </tr>
+
+        <tr>
+            <td>A</td>
+            <td>1234567890</td>
+    <td>dsadasdasda</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>123123123123</td>
+            <td>sfsdfsdfsdf</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>1234567890</td>
+            <td>sfsdfsdfsdfsfsdsd</td>
+
+        </tr>
+        <td rowspan="2">B,C</td>
+        <td>qwqweqw</td>
+        <td>afafsdfsdfsdfsdf</td>
+        
+        <tr>
+            <td colspan="3">ahdhaskdhashdkjashda</td>
+        </tr>
+
+    </table>
+</body></html>
